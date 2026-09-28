@@ -60,10 +60,12 @@ function headerHTML() {
         <nav>
           <div class="sidebar-title">Navigation</div>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/page1">Page 1</a></li>
+            <li><a href="/wisestgirl002/home.html">Home</a></li>
+            <li><a href="/wisestgirl002/flip.html">flip</a></li>
             <li><a href="/page2">Page 2</a></li>
             <li><a href="/page3">Page 3</a></li>
+            <li><a href="/sitemap.html" target="_blank">SITEMAP</a></li>
+         
         	<li>
         	
               	<details>
