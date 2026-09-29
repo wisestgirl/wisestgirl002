@@ -7,27 +7,52 @@
 /* Variables are used like this: var(--text-color) */
 :root {
   /* Background Colors: */
-  --background-color: #ffffff;
+  --background-color: #f0d790;
   --content-background-color: #ffffff;
-  --sidebar-background-color: #ffffff;
+  --sidebar-background-color: var(--content-background-color);
+  --header-background-color: var(--background-color);
 
   /* Text Colors: */
-  --text-color: #000000;
-  --sidebar-text-color: #000000;
-  --link-color: #cd212a;
-  --link-color-hover: #cd212a;
+  --text-color: #4a4a49;
+  --sidebar-text-color: #4a4a49;
+  --link-color: var(--text-color);
+  --link-color-hover: #f15b3e;
+  --header-color: #f15b3e;
 
   /* Text: */
-  --font: Times New Roman, serif;
-  --heading-font: Times New Roman, serif;
-  --font-size: 14px;
+  --font: Puritan;
+  --heading-font: Puritan;
+  --font-size: 16px;
 
   /* Other Settings: */
   --margin: 10px;
   --padding: 20px;
-  --border: 2px solid #cd212a;
-  --round-borders: 0px;
+  --less-padding: 10px;
+  --border: 2px solid #284f9f;
+  --round-borders: 5px;
   --sidebar-width: 200px;
+}
+
+
+@font-face {
+font-family: Puritan;
+src: url(/wisestgirl002/PuritanType/Puritan.ttf);
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: Puritan;
+src: url(/wisestgirl002/PuritanType/PuritanSwash-Bold.ttf);
+ font-weight: normal;
+ font-style: italic;
+}
+
+@font-face {
+ font-family: Puritan;
+ src: url(/wisestgirl002/PuritanType/PuritanAlternate-Bold.ttf);
+ font-weight: normal;
+ font-style: bold;
 }
 
 /* -------------------------------------------------------- */
@@ -45,7 +70,7 @@ body {
   min-height: 100vh;
   font-size: var(--font-size);
   margin: 0;
-  padding: var(--margin);
+  padding: var(--padding);
   color: var(--text-color);
   font-family: var(--font);
   line-height: 1.2;
@@ -56,12 +81,12 @@ body {
 
 ::selection {
   /* (Text highlighted by the user) */
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--background-color);
 }
 
 mark {
   /* Text highlighted by using the <mark> element */
-  text-shadow: 1px 1px 4px var(--link-color);
+  text-shadow: 1px 1px 4px var(--background-color);
   background-color: inherit;
   color: var(--text-color);
 }
@@ -110,9 +135,9 @@ main {
 header {
   grid-area: header;
   font-size: 1.2em;
-  border: var(--border);
+  border: none;
   border-radius: var(--round-borders);
-  background: var(--content-background-color);
+  background: var(--header-background-color);
 }
 
 .header-content {
@@ -120,14 +145,18 @@ header {
 }
 
 .header-title {
-  font-family: var(--heading-font);
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 5.5em;
+  font-weight: normal;
+  text-align: center;
 }
 
-.header-image img {
+.header-image img{
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
+
+
 }
 
 /* -------------------------------------------------------- */
@@ -140,7 +169,7 @@ aside {
   border-radius: var(--round-borders);
   overflow: hidden;
   background: var(--sidebar-background-color);
-  padding: var(--padding);
+  padding: var(--less-padding);
   color: var(--sidebar-text-color);
 }
 
@@ -169,6 +198,13 @@ aside {
 
 .sidebar-section > *:not(p):not(ul):not(ol):not(blockquote) {
   margin-top: 10px;
+}
+
+.statuscafe {
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+  width: 100%;
 }
 
 /* Sidebar Blockquote: */
@@ -208,12 +244,12 @@ aside {
 
 footer {
   grid-area: footer;
-  border: var(--border);
+  border: none;
   border-radius: var(--round-borders);
   overflow: hidden;
   font-size: 0.75em;
   padding: 15px;
-  background: var(--content-background-color);
+  background: var(--header-background-color);
   display: flex;
   justify-content: center;
 }
@@ -356,6 +392,7 @@ main h6 {
   font-family: var(--heading-font);
   margin-bottom: 0;
   line-height: 1.5;
+  color: var(--header-color)
 }
 
 main h1:first-child,

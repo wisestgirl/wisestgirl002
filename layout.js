@@ -15,6 +15,33 @@ document.addEventListener("DOMContentLoaded", function () {
   loadLayoutByPetraPixel();
 
   // Add any custom JavaScript code here...
+
+  //This is for an automatic TOC: use h9 for this: why doesn't this work? i think this can't go in the sidebar
+function initTableOfContents() {
+	const container = document.querySelector("#toc");
+	if (!container) return;
+
+	const allHeadings = document.querySelectorAll("h4");
+	if (allHeadings.length < 2) return;
+	let output = "<b>table of contents:</b><ol>";
+	[...allHeadings].forEach((headingEl) => {
+		const title = headingEl.innerHTML;
+		const link =
+			headingEl.getAttribute("id") ||
+			encodeURI(
+				title
+					.replaceAll(" ", "-")
+					.replaceAll("#", "")
+					.replaceAll("&", "")
+					.replaceAll(/<[^>]*>?/gm, "")
+					.replaceAll("--", "-")
+			).toLowerCase();
+		headingEl.setAttribute("id", link);
+		output += `<li><a href="#${link}">${title}</a></li>`;
+	});
+	container.innerHTML = output + "</ol>";
+}
+
 });
 
 function loadLayoutByPetraPixel() {
@@ -41,9 +68,9 @@ function headerHTML() {
       <header>
 
         <div class="header-content">
-	        <div class="header-title">Website Title</div>
-	        
-        	
+          <div class="header-image">
+	          <img  src="https://wisestgirl.neocities.org/img/wisestgirlDRI.png">
+          </div>
         </div>
       </header>
 
@@ -58,76 +85,35 @@ function headerHTML() {
         
         <!-- NAVIGATION -->
         <nav>
-          <div class="sidebar-title">Navigation</div>
+          <div class="sidebar-title">nav</div>
           <ul>
             <li><a href="/wisestgirl002/home.html">Home</a></li>
             <li><a href="/wisestgirl002/flip.html">flip</a></li>
-            <li><a href="/page2">Page 2</a></li>
-            <li><a href="/page3">Page 3</a></li>
             <li><a href="/sitemap.html" target="_blank">SITEMAP</a></li>
          
         	<li>
         	
               	<details>
-                <summary>Submenu</summary>
+                <summary>wisestgirl versions</summary>
                 <ul>
-                  <li><a href="/page-a">Page A</a></li>
-                  <li><a href="/page-b">Page B</a></li>
-                  <li><a href="/page-c">Page C</a></li>
-                  <li><a href="/page-d">Page D</a></li>
-                  <li><a href="/page-e">Page E</a></li>
+                  <li><a href="/">CURRENT</a></li>
+                  <li><a href="/wisestgirl001/home.html">001</a></li>
+                  <li><a href="/wisestgirl002/home.html">002</a></li>
                 </ul>
                 </details>
             </li>
           </ul>
         </nav>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+
+        <div id="toc">
         </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-          </blockquote>
+
+        <div class="statuscafe">
+          <iframe src="https://petracoding.github.io/neocities/widgets/statuscafe?center=0&marquee=0&font-family=Times New Roman&font-size=14px&color=#565673&linkColor=#d92f2f&username=wisestgirl&hideUsername=0&timeColor=#6d0fba" 
+          frameborder="0" width="200px" align="left" title="status.cafe">
+          </iframe>
         </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <ul>
-            <li>List</li>
-            <li>List</li>
-            <li><a href="/">List</a></li>
-            <li>List</li>
-          </ul>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <marquee>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          </marquee>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <img class="full-width-image" src="https://picsum.photos/id/14/1000/400">
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <div class="site-button">
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
-          </div>
-        </div>
+
       </aside>
 	
 	  
@@ -139,31 +125,21 @@ function headerHTML() {
 	  
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+          <div class="sidebar-title">follow me on neocities!</div>
+          <div class="site-button">
+          	<a href="https://neocities.org/site/wisestgirl" target="_blank">to do: make follow button</a>
+          </div>
         </div>
         
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+            <p>to do: make blockquotes better</p>
           </blockquote>
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <ul>
-            <li>List</li>
-            <li>List</li>
-            <li><a href="/">List</a></li>
-            <li>List</li>
-          </ul>
-        </div>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">Marquee</div>
           <marquee>
           	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
           	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
@@ -173,12 +149,13 @@ function headerHTML() {
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">Image</div>
           <img class="full-width-image" src="https://picsum.photos/id/14/1000/400">
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">Button</div>
+          <p>to do: make site nutton</p>
           <div class="site-button">
           	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
         	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
@@ -201,7 +178,7 @@ function footerHTML() {
       <!-- =============================================== -->
 
       <footer>
-            <div>Footer Text. <a href="/">Link.</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
+            <div>wisestgirl002 <a href="/">Link.</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
       </footer>`;
 }
 
