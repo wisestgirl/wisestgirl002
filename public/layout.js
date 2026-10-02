@@ -157,8 +157,8 @@ function headerHTML() {
           <div class="sidebar-title">Button</div>
           <p>to do: make site nutton</p>
           <div class="site-button">
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
+          	<a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a>
+        	<textarea><a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a></textarea>
           </div>
         </div>
       </aside>
