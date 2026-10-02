@@ -155,7 +155,7 @@ function headerHTML() {
         
         <div class="sidebar-section">
           <div class="sidebar-title">Button</div>
-          <p>to do: make site nutton</p>
+          <p>link to my site!</p>
           <div class="site-button">
           	<a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a>
         	<textarea><a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a></textarea>
