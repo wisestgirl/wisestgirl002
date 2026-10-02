@@ -123,7 +123,13 @@ function headerHTML() {
 
       <aside class="right-sidebar">
 	  
-        
+        <div class="sidebar-section">
+          <div class="sidebar-title">last updated:</div>
+          <iframe src="http://tylerlh.github.com/github-latest-commits-widget/?username=wisestgirl&repo=wisestgirl002&limit=3" allowtransparency="true" frameborder="0" scrolling="no" width="200px" align="left">
+          </iframe>
+        </div>
+
+
         <div class="sidebar-section">
           <div class="sidebar-title">follow me on neocities!</div>
           <div class="site-button">
@@ -147,15 +153,15 @@ function headerHTML() {
           	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
           </marquee>
         </div>
-        
+
+
         <div class="sidebar-section">
           <div class="sidebar-title">Image</div>
           <img class="full-width-image" src="https://picsum.photos/id/14/1000/400">
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Button</div>
-          <p>link to my site!</p>
+          <div class="sidebar-title">link to my site!</div>
           <div class="site-button">
           	<a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl" style="width:88px;height:31px;"></a>
         	<textarea><a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl" style="width:88px;height:31px;"></a></textarea>
