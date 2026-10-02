@@ -87,8 +87,8 @@ function headerHTML() {
         <nav>
           <div class="sidebar-title">nav</div>
           <ul>
-            <li><a href="/wisestgirl002/home.html">Home</a></li>
-            <li><a href="/wisestgirl002/flip.html">flip</a></li>
+            <li><a href="/home002.html">Home</a></li>
+            <li><a href="/flip002.html">flip</a></li>
             <li><a href="/sitemap.html" target="_blank">SITEMAP</a></li>
          
         	<li>
@@ -97,8 +97,8 @@ function headerHTML() {
                 <summary>wisestgirl versions</summary>
                 <ul>
                   <li><a href="/">CURRENT</a></li>
-                  <li><a href="/wisestgirl001/home.html">001</a></li>
-                  <li><a href="/wisestgirl002/home.html">002</a></li>
+                  <li><a href="/home001.html">001</a></li>
+                  <li><a href="/home002.html">002</a></li>
                 </ul>
                 </details>
             </li>
@@ -157,8 +157,8 @@ function headerHTML() {
           <div class="sidebar-title">Button</div>
           <p>link to my site!</p>
           <div class="site-button">
-          	<a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a>
-        	<textarea><a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a></textarea>
+          	<a href="https://wisestgirl.neocities.org/" width="88px" height="31px" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a>
+        	<textarea><a href="https://wisestgirl.neocities.org/" width="88px" height="31px" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a></textarea>
           </div>
         </div>
       </aside>
@@ -178,7 +178,7 @@ function footerHTML() {
       <!-- =============================================== -->
 
       <footer>
-            <div>wisestgirl002 <a href="/">Link.</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
+            <div>wisestgirl002 <a href="/sitemap.html">sitemap</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
       </footer>`;
 }
 
