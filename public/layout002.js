@@ -157,8 +157,8 @@ function headerHTML() {
           <div class="sidebar-title">Button</div>
           <p>link to my site!</p>
           <div class="site-button">
-          	<a href="https://wisestgirl.neocities.org/" width="88px" height="31px" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a>
-        	<textarea><a href="https://wisestgirl.neocities.org/" width="88px" height="31px" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl"></a></textarea>
+          	<a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl" style="width:88px;height:31px;"></a>
+        	<textarea><a href="https://wisestgirl.neocities.org/" target="_blank"><img src="https://wisestgirl.neocities.org/img/buttonwg002.png" alt="wisestgirl" style="width:88px;height:31px;"></a></textarea>
           </div>
         </div>
       </aside>
